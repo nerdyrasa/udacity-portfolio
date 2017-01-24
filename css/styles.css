@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    color: #2d3c49;
+    font-size: 16px;
+}
+
+hr {
+    border-top: 2px solid #7d97ad;
+}
+
+header {
+    height: 420px;
+    background: url(../img/my-hero.jpeg) no-repeat center bottom;
+    position: relative;
+}
+
+header a.logo {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/udacity.svg);
+    background-size: contain;
+    top: 15px;
+    left: 15px;
+}
+
+header div.hero {
+    position: absolute;
+    top: 130px;
+}
+
+header
+{
+    text-align: right;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+header h1,
+header h2 {
+    font-weight: 300;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin: 30px 20px 0 0 ;
+    letter-spacing: 5px;
+    line-height: 1.5em;
+}
+header h2 {
+    font-size: 1em;
+    margin: 0 20px 20px 0;
+}
+
+.box {
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+.featured-work {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 100%;
+}
+
+img {
+    width: calc(100% - 10px);
+}
+
+h2.box.headline {
+    text-align: left;
+    color: #7d97ad;
+    font-size: 1.7em;
+    font-weight: normal;
+    letter-spacing: 4px;
+    margin: 20px 0 10px 0;
+}
+
+h3.project-name {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.5em;
+    margin: 20px 0 10px 0;
+}
+
+a.project-link {
+    color: #2d3c49;
+}
+
+a.project-link::after {
+    content: attr(href);
+}
+
+@media screen and (min-width: 550px) {
+    .project-card {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    body {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        width: 33.333333%;
+    }
+}
