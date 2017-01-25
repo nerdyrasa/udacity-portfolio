@@ -1,48 +1,86 @@
-* {
-    box-sizing: border-box;
-}
-h1,
-h2,
-h3 {
-    margin: 0;
-}
-body {
+.app {
+    height: 100vh;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    margin: 0 auto;
     font-family: "Roboto", sans-serif;
     color: #2d3c49;
     font-size: 16px;
 }
 
-hr {
-    border-top: 2px solid #7d97ad;
-}
-
-header {
-    height: 420px;
-    background: url(../img/my-hero.jpeg) no-repeat center bottom;
+.header {
+    max-height: 400px;
+    height: 66.6vw;
     position: relative;
 }
 
-header a.logo {
+.header-content {
     position: absolute;
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: url(../img/udacity.svg);
-    background-size: contain;
-    top: 15px;
-    left: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
-header div.hero {
-    position: absolute;
-    top: 130px;
+.topbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 5vh 2vw 0;
+    align-items: center;
+    border-bottom: 3px #7d97ad solid;
+    margin-bottom: 20px;
 }
 
-header
-{
+.topbar-right {
     text-align: right;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    padding-right: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 8vw;
+    height: 8vw;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.hero {
+    overflow: hidden;
+    max-width: 800px;
+}
+
+section {
+    width: 100%;
+    min-height: 350px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    text-align: right;
 }
 
 header h1,
@@ -52,13 +90,15 @@ header h2 {
 
 header h1 {
     font-size: 2.2em;
-    margin: 30px 20px 0 0 ;
+    margin: 20px 0 0 0 ;
     letter-spacing: 5px;
-    line-height: 1.5em;
+    line-height: 1em;
 }
+
 header h2 {
     font-size: 1em;
-    margin: 0 20px 20px 0;
+    margin-bottom: 30px;
+    padding-right: 5px;
 }
 
 .box {
@@ -67,26 +107,26 @@ header h2 {
     width: 100%;
 }
 
-.featured-work {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.box {
+.box,
+.headline {
     width: 100%;
 }
 
 img {
-    width: calc(100% - 10px);
+    width: 100%;
 }
 
-h2.box.headline {
+.headline {
     text-align: left;
     color: #7d97ad;
     font-size: 1.7em;
     font-weight: normal;
     letter-spacing: 4px;
     margin: 20px 0 10px 0;
+}
+
+.project-card {
+    margin-bottom: 10px;
 }
 
 h3.project-name {
@@ -96,18 +136,39 @@ h3.project-name {
     margin: 20px 0 10px 0;
 }
 
+.project-desc {
+    text-align: justify;
+    margin: 0 5px;
+}
+
 a.project-link {
     color: #2d3c49;
+    font-size: .9em;
 }
 
 a.project-link::after {
     content: attr(href);
 }
 
-@media screen and (min-width: 550px) {
-    .project-card {
-        width: 50%;
+@media screen and (max-width: 320px) {
+
+    .logo {
+        background-position: center;
+        background-size: 30px 30px;
     }
+
+    header h1 {
+        line-height: 1em;
+    }
+
+}
+
+@media screen and (min-width: 550px) {
+
+    .project-card {
+        width: 48%;
+    }
+
 }
 
 @media screen and (min-width: 800px) {
@@ -118,6 +179,7 @@ a.project-link::after {
     }
 
     .project-card {
-        width: 33.333333%;
+        width: 32%;
     }
+
 }
