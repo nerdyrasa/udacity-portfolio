@@ -71,7 +71,7 @@
     max-width: 800px;
 }
 
-section {
+.featured-work {
     width: 100%;
     min-height: 350px;
     margin: 20px auto;
@@ -83,19 +83,19 @@ header {
     text-align: right;
 }
 
-header h1,
-header h2 {
+.name,
+.title {
     font-weight: 300;
 }
 
-header h1 {
+.name {
     font-size: 2.2em;
     margin: 20px 0 0 0 ;
     letter-spacing: 5px;
     line-height: 1em;
 }
 
-header h2 {
+.title {
     font-size: 1em;
     margin-bottom: 30px;
     padding-right: 5px;
@@ -129,7 +129,7 @@ img {
     margin-bottom: 10px;
 }
 
-h3.project-name {
+.project-name {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 1.5em;
@@ -141,12 +141,12 @@ h3.project-name {
     margin: 5px;
 }
 
-a.project-link {
+.project-link {
     color: #2d3c49;
     font-size: .9em;
 }
 
-a.project-link::after {
+.project-link::after {
     content: attr(href);
 }
 
@@ -157,7 +157,7 @@ a.project-link::after {
         background-size: 30px 30px;
     }
 
-    header h1 {
+    .name {
         line-height: 1em;
     }
 
